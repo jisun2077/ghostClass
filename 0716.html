@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 연습</title>
+    <style>
+        *{
+            margin: o;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #adafb2;
+            height: 3000px;
+        }
+        .container {
+            position:relative;
+            width: 375px;
+            height: 412px;
+            border: 1px solid #333;
+            border-radius: 12px;   
+            margin: 100px auto 0;
+            padding: 6px 16px; /*top, bottom left,right*/
+            display: flex;
+            align-items: flex-end; /*top, bottom left,right*/
+            gap: 20px ;
+            justify-content: center; /*top, bottom left,right*/
+            -ms-flex-direction: column;  /*top, bottom left,right*/
+            /*vertical*/
+        }
+
+        .editBtn {
+            position: 40px;
+            left: 40px;
+            top: 40px;
+        }
+
+        .btnTop {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            background-color: red;
+            coloer: #fff;
+            width:60px;height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btnTop:hover  {
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="editBtn"></button>
+ <button type="button">
+        <img src="./images/icon/home.svg" alt="home">
+    </button>
+
+     <button type="button">
+        <img src="./images/icon/calender.svg" alt="calender">
+    </button>
+
+     <button type="button">
+        <img src="./images/icon/settiog.svg" alt="setting">
+    </button>
+    </div>
+   <a href="#" class="btnTop">Top</a>
+
+</body>
+</html>
