@@ -10,6 +10,12 @@
             padding:0;
             box-sizing: border-box;
         }
+
+        html,
+        body {
+            scroll-behavior: #adafd;
+            
+        }
         body {
             background-color: #adafb2;
             height: 3000px;
@@ -22,7 +28,7 @@
             border-radius: 12px;   
             margin: 100px auto 0;
             padding: 6px 16px; /*top, bottom left,right*/
-            display: flex;
+            display: none;
             align-items: flex-end; /*top, bottom left,right*/
             gap: 20px ;
             justify-content: center; /*top, bottom left,right*/
@@ -44,17 +50,31 @@
             coloer: #fff;
             width:60px;height: 60px;
             border-radius: 50%;
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
         }
         .btnTop:hover  {
             background-color: aqua;
-            
+
+        .btn-container button {
+             background-color: aqua;
+             border: 1px solid #333;
+             height: 42px;
+             padding: 0 20px;
+        }
+
         }
     </style>
 </head>
 <body>
+    <div class="btn-container" title="팝업버튼을 클릭해보세요">
+    <button type="button" onclick ="modalPopup()">모달팝업 띄우기 </button>
+    <button type="button" onclick ="alertPopup()">Alert 띄우기 </button>
+    <button type="button" onclick ="confirmPopup()">confirm 띄우기 </button>
+    </div>
+
+
     <div class="container">
         <button type="button" class="editBtn"></button>
  <button type="button">
@@ -70,6 +90,16 @@
     </button>
     </div>
    <a href="#" class="btnTop">Top</a>
-
+<script>
+    function alertPopup() {
+        alert('')
+    }
+    function confirmPopup() {
+        confirm('')
+    }
+      function modalPopup() {
+        const el= document. querySelector ('.container')
+        el.style.display ='flex';
+    }
 </body>
 </html>
